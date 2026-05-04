@@ -4,6 +4,13 @@
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
+## Whats unique?
+
+#### I riced it to make it very beginner friendly , this works best for someone who wants learn basics of programming on  a cool terminal IDE.
+
+
+
+
 ## 🛠️ Installation
 
 #### Make a backup of your current nvim and shared folder
