@@ -1,7 +1,12 @@
--- NO "if true then return {} end" here!
 return {
-  -- == Examples of Adding Plugins ==
-  "andweeb/presence.nvim",
+  -- == Discord Rich Presence (cord.nvim) ==
+  {
+    "vyfor/cord.nvim",
+    build = ":Cord update",
+    opts = {}, 
+  },
+
+  -- == LSP Signature ==
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
