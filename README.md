@@ -33,5 +33,3 @@ Requires `winget` (App Installer).
 ### After installing
 
 Set your terminal font to **JetBrainsMono Nerd Font** (installed by the script), open a new terminal and run `nvim`.
-
-Java is not installed automatically. Install a JDK if you want `F5` to work for `.java` files.
