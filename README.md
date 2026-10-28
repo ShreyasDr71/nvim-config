@@ -1,41 +1,37 @@
-# AstroNvim Template
+# nvim-config
 
-**NOTE:** This is for AstroNvim v6+
+My AstroNvim v6 setup. I riced it to be beginner friendly, so it works well for someone learning the basics of programming in a terminal IDE.
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## Features
 
-## Whats unique?
+- AstroNvim v6 base with a custom dashboard
+- `F5` compiles and runs the current file (C, C++, Java, Python)
+- `<Leader>rp` runs the current Python file in a terminal
+- `<Leader>th` / `<Leader>tv` open a horizontal / vertical terminal in the file's directory
+- Discord Rich Presence (cord.nvim), LSP signature hints
 
-#### I riced it to make it very beginner friendly , this works best for someone who wants learn basics of programming on  a cool terminal IDE.
+## Install (one step)
 
+Each installer installs Neovim and all dependencies, backs up any existing config to `*.bak-<timestamp>`, clones this repo and syncs plugins.
 
+### Linux (Kali / Debian / Ubuntu, Arch, Fedora)
 
-
-## 🛠️ Installation
-
-#### Make a backup of your current nvim and shared folder
-
-```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+```sh
+curl -fsSL https://raw.githubusercontent.com/ShreyasDr71/nvim-config/master/install.sh | bash
 ```
 
-#### Create a new user repository from this template
+On Kali, if `apt update` fails because the archive signing key was rotated (`NO_PUBKEY`, `EXPKEYSIG`, etc.), the script downloads the current keyring from `archive.kali.org` and retries.
 
-Press the "Use this template" button above to create a new repository to store your user configuration.
+### Windows 10/11 (PowerShell)
 
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
-
-#### Clone the repository
-
-```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+```powershell
+irm https://raw.githubusercontent.com/ShreyasDr71/nvim-config/master/install.ps1 | iex
 ```
 
-#### Start Neovim
+Requires `winget` (App Installer).
 
-```shell
-nvim
-```
+### After installing
+
+Set your terminal font to **JetBrainsMono Nerd Font** (installed by the script), open a new terminal and run `nvim`.
+
+Java is not installed automatically. Install a JDK if you want `F5` to work for `.java` files.

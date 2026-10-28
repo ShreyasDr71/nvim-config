@@ -10,7 +10,7 @@ return {
           ["<Leader>tv"] = { "<cmd>ToggleTerm direction=vertical dir=%:p:h<cr>", desc = "Terminal vertical (file dir)" },
           
           -- Quick Run Python
-          ["<Leader>rp"] = { "<cmd>w<cr><cmd>ToggleTerm direction=horizontal dir=%:p:h cmd='python3 %'<cr>", desc = "Run Python file" },
+          ["<Leader>rp"] = { "<cmd>w<cr><cmd>ToggleTerm direction=horizontal dir=%:p:h cmd='" .. (vim.fn.has "win32" == 1 and "python" or "python3") .. " %'<cr>", desc = "Run Python file" },
         },
       },
     },
